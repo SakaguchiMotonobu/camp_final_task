@@ -2,14 +2,14 @@
 //1.  DB接続します xxxにDB名を入れます
 try {
 // mampの場合は注意です！違います！別途後ほど確認します！
-$pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost','root','');
+$pdo = new PDO('mysql:dbname=stork_db;charset=utf8;host=localhost','root','');
 } catch (PDOException $e) {
   exit('データベースに接続できませんでした。'.$e->getMessage());
 }
 
 //２．データ登録SQL作成
 //作ったテーブル名を書く場所  xxxにテーブル名を入れます
-$stmt = $pdo->prepare("SELECT * FROM gs_bm_table");
+$stmt = $pdo->prepare("SELECT * FROM temperature_table");
 $status = $stmt->execute();
 
 //３．データ表示
@@ -22,7 +22,7 @@ if($status==false){
   //Selectデータの数だけ自動でループしてくれる $resultの中に「カラム名」が入ってくるのでそれを表示させる例
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
     $view .= "<tr>";
-    $view .= "<td width='35px'>".$result["id"]."</td><td width='150px'>".$result["book"]."</td><td width='150px'>".$result["url"]."</td><td width='200px'>".$result["review"]."</td><td width='120px'>".$result["indate"]."</td>";//←ここにカラム名を追加していく
+    $view .= "<td width='35px'>".$result["id"]."</td><td width='150px'>".$result["date"]."</td><td width='150px'>".$result["temperature"]."</td>";//←ここにカラム名を追加していく
     $view .= "</tr>";
   }
 

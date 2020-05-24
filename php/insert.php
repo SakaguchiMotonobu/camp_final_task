@@ -1,27 +1,23 @@
 <?php
 //1. POSTデータ取得
 
-//まず前のphpからデーターを受け取る（この受け取ったデータをもとにbindValueと結びつけるため）
-$book = $_POST["book"];
-$url = $_POST["url"];
-$review = $_POST["review"];
+//index.htmlからデーターの受け取り（その後、bindValueと結びつけ）
+$date = $_POST["date"];
+$temperature = $_POST["temperature"];
 
-//2. DB接続します xxxにDB名を入力する
-//ここから作成したDBに接続をしてデータを登録します xxxxに作成したデータベース名を書きます
+//2. DB（stork_db）に接続
+//以下で、作成したDBに接続をしてデータを登録します
 try {
-  $pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost','root','');
+  $pdo = new PDO('mysql:dbname=stork_db;charset=utf8;host=localhost','root','');
 } catch (PDOException $e) {
   exit('DbConnectError:'.$e->getMessage());
 }
 
 
-//３．データ登録SQL作成 //ここにカラム名を入力する
-//xxx_table(テーブル名)はテーブル名を入力します
-$stmt = $pdo->prepare("INSERT INTO gs_bm_table(id, book, url, review,
-indate )VALUES(NULL, :book, :url, :review, sysdate())");
-$stmt->bindValue(':book', $book, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
-$stmt->bindValue(':url', $url, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
-$stmt->bindValue(':review', $review, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
+//３．データ登録SQL作成 //以下にカラム名を入力
+$stmt = $pdo->prepare("INSERT INTO temperature_table(id, date, temperature )VALUES(NULL, :date, :temperature )");
+$stmt->bindValue(':date', $date, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
+$stmt->bindValue(':temperature', $temperature, PDO::PARAM_STR);  //Integer（数値の場合 PDO::PARAM_INT)
 $status = $stmt->execute();
 
 //４．データ登録処理後
