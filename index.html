@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>S-tallk</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- ヘッダー -->
+      <header>
+        <div class="header">
+          <a href="index.html" class="main_icon"
+            ><img src="img/stork.png" alt="コウノトリ"
+          /></a>
+          <a href="index.html" class="main_title">
+            <p class="title">S-tallk ～これからの話について～</p>
+          </a>
+          <div class="menu-btn">
+            <img src="img/hamburger.png" alt="ハンバーガーメニュー" />
+            <div class="menu">
+              <div class="menu__item">TOP</div>
+              <div class="menu__item">ABOUT</div>
+              <div class="menu__item">BLOG</div>
+              <div class="menu__item">CONTACT</div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- ヘッダー -->
+
+      <!-- メインビジュアル -->
+      <div id="mainvisual" class="mainvisual">
+        <img id="baby_img" src="img/baby01.jpg" alt="赤ちゃん" />
+      </div>
+      <!-- メインビジュアル -->
+
+      <!-- 機能部分 -->
+      <div class="function_field">
+        <!-- メイン領域 -->
+        <div class="main_field">
+          <div class="input_field">
+            <div class="input_inner_field">
+              <!-- タイトル -->
+              <div class="input_title">
+                <img src="img/thermometer.png" alt="体温計" />
+                <p class="input_text_title">日々の検温</p>
+              </div>
+              <!-- タイトル -->
+
+              <form method="post" action="php/insert.php" class="daily_record">
+                <!-- 日付の入力 -->
+                <p class="small_title"><span class="emphasis">●日付</span></p>
+                <div class="small_input">
+                  <input
+                    type="date"
+                    id="date_input"
+                    class="date_input"
+                    name="date"
+                    placeholder="Date"
+                    required
+                  />
+                </div>
+                <!-- 日付の入力 -->
+
+                <!-- 体温の入力 -->
+                <p class="small_title">
+                  <span class="emphasis">●体温</span
+                  >（※半角数字で小数点第一位まで入力）
+                </p>
+                <div class="small_input">
+                  <input
+                    type="temperature"
+                    id="temperature_input"
+                    class="temperature_input"
+                    name="temperature"
+                    required
+                  />
+                  <div>℃</div>
+                </div>
+                <!-- 体温の入力 -->
+
+                <!-- 記録ボタン -->
+                <div class="submit_container">
+                  <input type="submit" class="record_button" value="記録" />
+                </div>
+                <!-- 記録ボタン -->
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- メイン領域 -->
+
+        <!-- サブ領域 -->
+        <div class="sub_field">
+          <p>サブ</p>
+        </div>
+        <!-- サブ領域 -->
+      </div>
+      <!-- 機能部分 -->
+
+      <!-- フッター -->
+      <footer class="footer text-center">
+        <div class="wrapper">
+          <small class="copyrights"
+            >&copy;Copyright 2020 MOTONOBU SAKAGUCHI All rIghts reserved.
+          </small>
+        </div>
+      </footer>
+      <!-- フッター -->
+    </div>
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- jsファイル読込み -->
+    <script src="js/stork.js"></script>
+  </body>
+</html>
