@@ -1,6 +1,17 @@
 $(document).ready(function () {
   //   alert("呼び出し成功");
 
+  // ハンバーガーメニュー
+  $(
+    (function () {
+      $(".menu-btn").on("click", function () {
+        $(".menu").toggleClass("is-active");
+      });
+    })()
+  );
+  // ハンバーガーメニュー
+
+  //   スライドショー
   const img_src = ["img/baby01.jpg", "img/baby02.jpg", "img/baby03.jpg"];
   let num = -1;
 
@@ -12,15 +23,11 @@ $(document).ready(function () {
     }
     document.getElementById("baby_img").src = img_src[num];
   }
-
   setInterval(slideshow_timer, 4000);
+  //   スライドショー
 
-  // 以下実験
-  $(
-    (function () {
-      $(".menu-btn").on("click", function () {
-        $(".menu").toggleClass("is-active");
-      });
-    })()
-  );
+  //   予想日の算出
+  let dt = new Date();
+  console.log(dt);
+  //   予想日の算出
 });
