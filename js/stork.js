@@ -23,7 +23,7 @@ $(document).ready(function () {
     }
     document.getElementById("baby_img").src = img_src[num];
   }
-  setInterval(slideshow_timer, 4000);
+  setInterval(slideshow_timer, 3000);
   //   スライドショー
 
   //   予想日の算出
