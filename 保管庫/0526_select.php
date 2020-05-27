@@ -1,12 +1,14 @@
 <?php
 //1.  DB接続します xxxにDB名を入れます
 try {
+// mampの場合は注意です！違います！別途後ほど確認します！
 $pdo = new PDO('mysql:dbname=stork_db;charset=utf8;host=localhost','root','');
 } catch (PDOException $e) {
   exit('データベースに接続できませんでした。'.$e->getMessage());
 }
 
 //２．データ登録SQL作成
+//作ったテーブル名を書く場所  xxxにテーブル名を入れます
 $stmt = $pdo->prepare("SELECT * FROM temperature_table");
 $status = $stmt->execute();
 

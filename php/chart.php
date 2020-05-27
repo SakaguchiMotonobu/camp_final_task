@@ -27,7 +27,6 @@ if($status==false){
 }
 ?>
 
-<!-- 画面表示部分 -->
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -46,37 +45,34 @@ if($status==false){
         var data = google.visualization.arrayToDataTable([
           //グラフデータの指定
           ["月日", "℃"],
-          ["5/1", 36.2],
-          ["5/2", 36.1],
-          ["5/3", 35.8],
-          ["5/4", 36.4],
-          ["5/5", 36.2],
-          ["5/6", 36.2],
-          ["5/7", 36.1],
-          ["5/8", 35.8],
-          ["5/9", 36.4],
-          ["5/10", 36.2],
-          ["5/11", 36.2],
-          ["5/12", 36.1],
-          ["5/13", 35.8],
-          ["5/14", 36.4],
-          ["5/15", 36.2],
-          ["5/16", 36.2],
-          ["5/17", 36.1],
-          ["5/18", 35.8],
-          ["5/19", 36.4],
-          ["5/20", 36.2],
-          ["5/21", 36.2],
-          ["5/22", 36.1],
-          ["5/23", 35.8],
-          ["5/24", 36.4],
-          ["5/25", 36.2],
-          ["5/26", 36.2],
-          ["5/27", 36.1],
-          ["5/28", 35.8],
-          ["5/29", 36.4],
-          ["5/30", 36.2],
-          ["5/31", 36.2],
+          ["5月27日", 36.2],
+          ["5月28日", 36.1],
+          ["5月29日", 35.8],
+          ["5月30日", 36.4],
+          ["5月31日", 36.2],
+          ["5月27日", 36.2],
+          ["5月28日", 36.1],
+          ["5月29日", 35.8],
+          ["5月30日", 36.4],
+          ["5月31日", 36.2],
+          ["5月27日", 36.2],
+          ["5月28日", 36.1],
+          ["5月29日", 35.8],
+          ["5月30日", 36.4],
+          ["5月31日", 36.2],
+          ["5月27日", 36.2],
+          ["5月28日", 36.1],
+          ["5月29日", 35.8],
+          ["5月30日", 36.4],
+          ["5月31日", 36.2],
+          ["5月27日", 36.2],
+          ["5月28日", 36.1],
+          ["5月29日", 35.8],
+          ["5月30日", 36.4],
+          ["5月31日", 36.2],
+          ["5月27日", 36.2],
+          ["5月28日", 36.1],
+          ["5月28日", 36.1],
         ]);
 
         var options = {
@@ -98,52 +94,3 @@ if($status==false){
     <!-- グラフの表示箇所 -->
   </body>
 </html>
-<!-- 画面表示部分 -->
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ブックマークリスト</title>
-<link rel="stylesheet" href="css/range.css">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<style>div{padding: 10px;font-size:16px;}</style>
-</head>
-<body id="main">
-<!-- Head[Start] -->
-<!-- <header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">データ登録画面へ</a>
-      </div>
-    </div>
-  </nav>
-</header> -->
-<!-- Head[End] -->
-
-<!-- Main[Start] $view-->
-<!-- <div>
-
-    <div class="container jumbotron">
-    <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333" class="book_table">
-    <tr>
-    <th width="35px">No.</th>
-    <th width="150px">書籍名</th>
-    <th width="150px">ＵＲＬ</th>
-    <th width="200px">書評</th>
-    <th width="120px">登録日時</th>
-    </tr>
-    <!-- <?=$view?> -->
-    </table>
-    </div>
-
-<!-- </div> -->
-<!-- Main[End] -->
-
-<!-- </body>
-</html> -->
