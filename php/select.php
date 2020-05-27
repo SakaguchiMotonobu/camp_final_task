@@ -19,11 +19,13 @@ if($status==false){
 }else{
   //Selectデータの数だけ自動でループしてくれる $resultの中に「カラム名」が入ってくるのでそれを表示させる例
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-    $view .= "<tr>";
-    $view .= "<td width='35px'>".$result["id"]."</td><td width='150px'>".$result["date"]."</td><td width='150px'>".$result["temperature"]."</td>";//←ここにカラム名を追加していく
-    $view .= "</tr>";
+      $chart_date[] = $result["date"];
+      $chart_temperature[] = $result["temperature"];
   }
-
+    print_r($chart_date);
+    print_r($chart_temperature);
+  $chart_date_json = json_encode($chart_date);
+  $chart_temperature_json = json_encode($chart_temperature);
 }
 ?>
 
@@ -38,6 +40,19 @@ if($status==false){
     <title>体温の推移</title>
   </head>
   <body>
+    <!-- php配列の受取り -->
+    <script>
+        let chart_date = <?php echo $chart_date_json; ?>;
+        let chart_temperature = <?php echo $chart_temperature_json; ?>;
+        console.log(chart_date);
+        console.log(chart_temperature);
+        
+        for (let i=0; i<chart_date.length;i++){
+        console.log(chart_date[i]);
+        }
+    </script>
+    <!-- php配列の受取り -->
+
     <!-- 折れ線グラフの描画 -->
     <script type="text/javascript">
       google.load("visualization", "1", { packages: ["corechart"] });
@@ -82,7 +97,7 @@ if($status==false){
         var options = {
           //オプションの指定
           title: "体温の推移",
-          colors: ["#ff0000"],
+          colors: ["#ff6600"],
           //   vAxis: { minValue: 35.1, maxValue: 39.9, gridlined: { count: 0.11 } },
         };
 
