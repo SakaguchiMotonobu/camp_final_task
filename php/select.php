@@ -40,7 +40,6 @@ if($status==false){
 　<title>基礎体温の推移</title> 
 </head>
 <body>
-  <h1>●基礎体温の推移</h1>
   <canvas id="line_chart"></canvas>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 
@@ -48,8 +47,8 @@ if($status==false){
     let chart_date = <?php echo $chart_date_json; ?>;
     let chart_temperature = <?php echo $chart_temperature_json; ?>;
 
-    console.log(chart_date);
-    console.log(chart_temperature);
+    // console.log(chart_date);
+    // console.log(chart_temperature);
 
     // グラフに表示する数を限定
     while (chart_date.length>28) {
@@ -59,15 +58,19 @@ if($status==false){
         chart_temperature.shift();
     }
 
+    // 日付の標記の整形
+    let chart_date_shap1 = chart_date.map(item => item.slice(5))
+    let chart_date_shap2 = chart_date_shap1.map(item => item.replace( '-', '月' ))
+    let chart_date_shap3 = chart_date_shap2.map(item => item+"日")
 
   var ctx = document.getElementById("line_chart");
   var myLineChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: chart_date,
+      labels: chart_date_shap3,
       datasets: [
         {
-          label: '基礎体温（℃）',
+          label: '体温（℃）',
           data: chart_temperature,
           borderColor: "rgba(253,126,0,1)",
           backgroundColor: "rgba(0,0,0,0)",
@@ -84,9 +87,9 @@ if($status==false){
       scales: {
         yAxes: [{
           ticks: {
-            suggestedMax: 38,
-            suggestedMin: 35,
-            stepSize: 0.5,
+            suggestedMax: 38.0,
+            suggestedMin: 35.0,
+            stepSize: 1.0,
             callback: function(value, index, values){
               return  value +  '℃'
             }
