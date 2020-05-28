@@ -48,6 +48,18 @@ if($status==false){
     let chart_date = <?php echo $chart_date_json; ?>;
     let chart_temperature = <?php echo $chart_temperature_json; ?>;
 
+    console.log(chart_date);
+    console.log(chart_temperature);
+
+    // グラフに表示する数を限定
+    while (chart_date.length>28) {
+        chart_date.shift();
+    }
+    while (chart_temperature.length>28) {
+        chart_temperature.shift();
+    }
+
+
   var ctx = document.getElementById("line_chart");
   var myLineChart = new Chart(ctx, {
     type: 'line',
@@ -59,7 +71,8 @@ if($status==false){
           data: chart_temperature,
           borderColor: "rgba(253,126,0,1)",
           backgroundColor: "rgba(0,0,0,0)",
-          lineTension: 0,
+          pointBackgroundColor: "rgba(253,126,0,1)",
+          lineTension: 0, //各点を直線で結ぶ
         }
       ],
     },
