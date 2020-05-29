@@ -40,7 +40,7 @@ if($status==false){
 　<title>基礎体温の推移</title> 
 </head>
 <body>
-  <div class="line_chart" style="position:absolute; top:60px; left:10px; width:500px; height:500px;"><canvas id="line_chart"></canvas></div>
+  <div class="line_chart"><canvas id="line_chart" class="line_chart"></canvas></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
 
   <script>
