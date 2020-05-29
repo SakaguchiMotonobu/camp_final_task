@@ -59,15 +59,15 @@ if($status==false){
     }
 
     // 日付の標記の整形
-    let chart_date_shap1 = chart_date.map(item => item.slice(5))
-    let chart_date_shap2 = chart_date_shap1.map(item => item.replace( '-', '月' ))
-    let chart_date_shap3 = chart_date_shap2.map(item => item+"日")
+    let chart_date_shap = chart_date.map(item => item.slice(5).replace( '-', '月' )+"日")
+    // let chart_date_shap2 = chart_date_shap1.map(item => item.replace( '-', '月' ))
+    // let chart_date_shap3 = chart_date_shap2.map(item => item+"日")
 
   var ctx = document.getElementById("line_chart");
   var myLineChart = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: chart_date_shap3,
+      labels: chart_date_shap,
       datasets: [
         {
           label: '体温（℃）',
