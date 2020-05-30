@@ -203,4 +203,61 @@ body {
 /* フッター */
 
 /* グラフ */
+.chart {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+.line_chart {
+  /* position: absolute; */
+  /* top: 60px; */
+  /* left: 10px; */
+  /* width: 1200px;
+  height: 500px; */
+}
+.chart_temperature {
+  width: 600px;
+  margin: 60px auto;
+}
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table th:first-child {
+  border-radius: 5px 0 0 0;
+}
+table th:last-child {
+  border-radius: 0 5px 0 0;
+  border-right: 1px solid #ff9933;
+}
+table th {
+  text-align: center;
+  color: white;
+  background: linear-gradient(#ffcc33, #ff6633);
+  border-left: 1px solid #ff9933;
+  border-top: 1px solid #ff9933;
+  border-bottom: 1px solid #ff9933;
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3) inset;
+  width: 25%;
+  padding: 10px 0;
+}
+table td {
+  text-align: center;
+  border-left: 1px solid #a8b7c5;
+  border-bottom: 1px solid #a8b7c5;
+  border-top: none;
+  box-shadow: 0px -3px 5px 1px #eee inset;
+  width: 25%;
+  padding: 10px 0;
+}
+table td:last-child {
+  border-right: 1px solid #a8b7c5;
+}
+table tr:last-child td:first-child {
+  border-radius: 0 0 0 5px;
+}
+table tr:last-child td:last-child {
+  border-radius: 0 0 5px 0;
+}
 /* グラフ */
