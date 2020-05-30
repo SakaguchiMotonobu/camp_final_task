@@ -215,9 +215,18 @@ body {
   /* width: 1200px;
   height: 500px; */
 }
+canvas#line_chart {
+  background-color: #fff9ee;
+  box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
 .chart_temperature {
   width: 600px;
   margin: 60px auto;
+}
+form {
+  background-color: #fff9ee;
+  box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3);
 }
 table {
   width: 100%;
@@ -261,3 +270,8 @@ table tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
 }
 /* グラフ */
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
