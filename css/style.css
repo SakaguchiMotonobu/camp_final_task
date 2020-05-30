@@ -224,7 +224,7 @@ canvas#line_chart {
   width: 600px;
   margin: 60px auto;
 }
-form {
+.form {
   background-color: #fff9ee;
   box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3);
 }

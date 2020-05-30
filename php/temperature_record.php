@@ -80,16 +80,19 @@ if($status==false){
         <!-- 一覧表 -->
         <div class="outer_chart">
             <div class="chart_temperature">
-                <form method="post" action="#">
-                    <table id="output_temperature">
-                        <tr>
-                        <th>修正／削除</th>
-                        <th>日付</th>
-                        <th>体温（℃）</th>
-                        </tr>
-                        <!-- ＤＢからのデータを表示 -->
-                        <?=$view?>
-                    </table>
+                <form method="post" action="temperature_record_edit.php">
+                    <div class="form">
+                        <table id="output_temperature">
+                            <tr>
+                            <th>修正／削除</th>
+                            <th>日付</th>
+                            <th>体温（℃）</th>
+                            </tr>
+                            <!-- ＤＢからのデータを表示 -->
+                            <?=$view?>
+                        </table>
+                    </div>
+                    <input type="submit" value="修正">
                 </form>
             </div>
         </div>
