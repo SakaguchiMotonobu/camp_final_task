@@ -12,7 +12,7 @@ $stmt = $pdo->prepare("SELECT * FROM temperature_table");
 $status = $stmt->execute();
 
 //３．データ表示
-$view="";
+// $view="";
 if($status==false){
   //execute（SQL実行時にエラーがある場合）
   $error = $stmt->errorInfo();
@@ -106,6 +106,14 @@ if($status==false){
   });
   </script>
   <!-- Chart.jsの設定 -->
+
+  <!-- 表 -->
+  <?php
+  print $result["temperature"];
+  print "<br>";
+  ?>
+  <!-- 表 -->
+
 
 </body>
 </html>

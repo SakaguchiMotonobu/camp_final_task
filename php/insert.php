@@ -27,7 +27,7 @@ if($status==false){
   exit("QueryError:".$error[2]);
 }else{
   //５．index.phpへリダイレクト 書くときにLocation: in この:　のあとは半角スペースがいるので注意！！
-  header("Location: chart.php");
+  header("Location: temperature_record.php");
   exit;
 
 }
