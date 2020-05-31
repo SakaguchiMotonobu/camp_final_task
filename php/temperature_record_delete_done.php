@@ -30,7 +30,7 @@ $status = $stmt->execute();
         <!-- ヘッダー -->
         <header>
             <div class="header">
-                <a href="index.html" class="main_icon"
+                <a href="../index.html" class="main_icon"
                 ><img src="../img/stork.png" alt="コウノトリ"
                 /></a>
                 <a href="index.html" class="main_title">
@@ -39,10 +39,10 @@ $status = $stmt->execute();
                 <div class="menu-btn">
                     <img src="../img/hamburger.png" alt="ハンバーガーメニュー" />
                     <div class="menu">
-                        <div class="menu__item">TOP</div>
-                        <div class="menu__item">ABOUT</div>
-                        <div class="menu__item">BLOG</div>
-                        <div class="menu__item">CONTACT</div>
+                       <a href="../index.html" class="dec"><div class="menu__item">トップページ</div></a>
+                       <a href="../input.html" class="dec"><div class="menu__item">検温結果の記録</div></a>
+                       <a href="temperature_record" class="dec"><div class="menu__item">基礎体温の推移</div></a>
+                       <a href="#" class="dec"><div class="menu__item">出産日予測</div></a>
                     </div>
                 </div>
             </div>

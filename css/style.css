@@ -3,7 +3,7 @@ body {
 }
 /* ボディー全体 */
 .wrap {
-  width: 1200px;
+  /* width: 1200px; */
   /* max-width: 100%; */
   margin: 0 auto;
 }
@@ -11,7 +11,7 @@ body {
 
 /* ヘッダー */
 .header {
-  margin: 0 auto 6px auto;
+  margin: 0 auto 40px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +36,9 @@ body {
   margin-left: auto;
   margin-right: 40px;
 }
+.menu-btn img {
+  cursor: pointer;
+}
 .menu {
   position: fixed;
   top: 0;
@@ -57,6 +60,9 @@ body {
   color: #fff;
   box-sizing: border-box;
 }
+.dec {
+  text-decoration: none;
+}
 /* アニメーション前のメニューの状態 */
 .menu {
   transform: translateX(100vw);
@@ -74,6 +80,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3); */
+}
+.shadow {
+  width: 1200px;
+  height: 570px;
   box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3);
 }
 .mainvisual img {
