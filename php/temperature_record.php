@@ -1,13 +1,13 @@
 <!-- php（DBと連携） -->
 <?php
-//1.  DB接続します xxxにDB名を入れます
+//1.  DBに接続
 try {
 $pdo = new PDO('mysql:dbname=stork_db;charset=utf8;host=localhost','root','');
 } catch (PDOException $e) {
   exit('データベースに接続できませんでした。'.$e->getMessage());
 }
 
-//２．データ登録SQL作成
+//２．データ取得SQL作成
 $stmt = $pdo->prepare("select * from (select * from temperature_table order by date desc limit 30) as A order by date"); //最新30件を日付の昇順で取得
 $status = $stmt->execute();
 
@@ -36,7 +36,7 @@ if($status==false){
 ?>
 <!-- php（DBと連携） -->
 
-<!-- html, js -->
+<!-- html -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -50,21 +50,21 @@ if($status==false){
         <!-- ヘッダー -->
         <header>
             <div class="header">
-            <a href="index.html" class="main_icon"
-            ><img src="../img/stork.png" alt="コウノトリ"
-            /></a>
-            <a href="index.html" class="main_title">
-            <p class="title">S-tallk ～これからの話について～</p>
-            </a>
-            <div class="menu-btn">
-            <img src="../img/hamburger.png" alt="ハンバーガーメニュー" />
-            <div class="menu">
-            <div class="menu__item">TOP</div>
-            <div class="menu__item">ABOUT</div>
-            <div class="menu__item">BLOG</div>
-            <div class="menu__item">CONTACT</div>
-            </div>
-            </div>
+                <a href="index.html" class="main_icon"
+                ><img src="../img/stork.png" alt="コウノトリ"
+                /></a>
+                <a href="index.html" class="main_title">
+                <p class="title">S-tallk ～これからの話について～</p>
+                </a>
+                <div class="menu-btn">
+                    <img src="../img/hamburger.png" alt="ハンバーガーメニュー" />
+                    <div class="menu">
+                        <div class="menu__item">TOP</div>
+                        <div class="menu__item">ABOUT</div>
+                        <div class="menu__item">BLOG</div>
+                        <div class="menu__item">CONTACT</div>
+                    </div>
+                </div>
             </div>
         </header>
         <!-- ヘッダー -->
@@ -80,7 +80,7 @@ if($status==false){
         <!-- 一覧表 -->
         <div class="outer_chart">
             <div class="chart_temperature">
-                <form method="post" action="temperature_record_edit.php">
+                <form method="post" action="branch.php">
                     <div class="form">
                         <table id="output_temperature">
                             <tr>
@@ -92,7 +92,12 @@ if($status==false){
                             <?=$view?>
                         </table>
                     </div>
-                    <input type="submit" value="修正">
+                    <!-- ボタン -->
+                    <div class="button_container">
+                        <input type="submit" name="edit" class="button" value="修正">
+                        <input type="submit" name="delete" class="button" value="削除">
+                    </div>
+                    <!-- ボタン -->
                 </form>
             </div>
         </div>
@@ -110,7 +115,6 @@ if($status==false){
         </footer>
         <!-- フッター -->
     </div>
-
 
         <!-- Chart.jsの読込み -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
@@ -180,4 +184,4 @@ if($status==false){
 
 </body>
 </html>
-<!-- html, js -->
+<!-- html -->

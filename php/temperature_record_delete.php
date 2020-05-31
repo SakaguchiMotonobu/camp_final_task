@@ -3,7 +3,7 @@
 //1.  DBに接続
 try {
 
-$edit_id = $_GET["id"];
+$delete_id = $_GET["id"];
 
 $pdo = new PDO('mysql:dbname=stork_db;charset=utf8;host=localhost','root','');
 } catch (PDOException $e) {
@@ -11,7 +11,7 @@ $pdo = new PDO('mysql:dbname=stork_db;charset=utf8;host=localhost','root','');
 }
 
 //２．データ取得SQL作成
-$stmt = $pdo->prepare("SELECT * FROM temperature_table WHERE id=$edit_id"); 
+$stmt = $pdo->prepare("SELECT * FROM temperature_table WHERE id=$delete_id"); 
 $status = $stmt->execute();
 
 //３．データ表示
@@ -23,8 +23,8 @@ if($status==false){
 }else{
   //Selectデータの数だけ自動でループ $resultの中に「カラム名」が入ってくるのでそれを表示
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-      $edit_date = $result["date"];
-      $edit_temperature = $result["temperature"];
+      $delete_date = $result["date"];
+      $delete_temperature = $result["temperature"];
   }
 
 }
@@ -64,10 +64,10 @@ if($status==false){
         <!-- ヘッダー -->
 
         <!-- 入力箇所 -->
-        <form method="post" action="temperature_record_edit_done.php" class="daily_record">
+        <form method="post" action="temperature_record_delete_done.php" class="daily_record">
 
             <!-- idをhiddenで次の画面へパス -->
-            <input type="hidden" name="id" value="<?php echo $edit_id;?>">
+            <input type="hidden" name="id" value="<?php echo $delete_id;?>">
             <!-- idをhiddenで次の画面へパス -->
 
             <!-- 日付の入力 -->
@@ -79,7 +79,7 @@ if($status==false){
                 class="date_input"
                 name="date"
                 placeholder="Date"
-                value="<?php echo $edit_date;?>"
+                value="<?php echo $delete_date;?>"
                 required
                 />
             </div>
@@ -96,7 +96,7 @@ if($status==false){
                 id="temperature_input"
                 class="temperature_input"
                 name="temperature"
-                value="<?php echo $edit_temperature;?>"
+                value="<?php echo $delete_temperature;?>"
                 required
                 />
                 <div>℃</div>
@@ -105,7 +105,7 @@ if($status==false){
 
             <!-- 記録ボタン -->
             <div class="submit_container">
-                <input type="submit" class="record_button" value="修正" />
+                <input type="submit" class="record_button" value="削除" />
             </div>
             <!-- 記録ボタン -->
         </form>
