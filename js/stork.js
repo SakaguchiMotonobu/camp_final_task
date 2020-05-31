@@ -27,7 +27,7 @@ $(document).ready(function () {
   //   スライドショー
 
   //   予想日の算出
-  let dt = new Date();
-  console.log(dt);
+  //   let dt = new Date();
+  //   console.log(dt);
   //   予想日の算出
 });

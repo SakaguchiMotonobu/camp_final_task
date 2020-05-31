@@ -8,7 +8,7 @@ $pdo = new PDO('mysql:dbname=stork_db;charset=utf8;host=localhost','root','');
 }
 
 //２．データ登録SQL作成
-$stmt = $pdo->prepare("select * from (select * from temperature_table order by date desc limit 30) as A order by id"); //最新30件を日付の昇順で取得
+$stmt = $pdo->prepare("select * from (select * from temperature_table order by date desc limit 30) as A order by date"); //最新30件を日付の昇順で取得
 $status = $stmt->execute();
 
 //３．データ表示
