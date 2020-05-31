@@ -53,7 +53,7 @@ if($status==false){
                 <a href="../index.html" class="main_icon"
                 ><img src="../img/stork.png" alt="コウノトリ"
                 /></a>
-                <a href="index.html" class="main_title">
+                <a href="../index.html" class="main_title">
                 <p class="title">S-tallk ～これからの話について～</p>
                 </a>
                 <div class="menu-btn">
@@ -61,7 +61,7 @@ if($status==false){
                     <div class="menu">
                        <a href="../index.html" class="dec"><div class="menu__item">トップページ</div></a>
                        <a href="../input.html" class="dec"><div class="menu__item">検温結果の記録</div></a>
-                       <a href="temperature_record" class="dec"><div class="menu__item">基礎体温の推移</div></a>
+                       <a href="temperature_record.php" class="dec"><div class="menu__item">基礎体温の推移</div></a>
                        <a href="#" class="dec"><div class="menu__item">出産日予測</div></a>
                     </div>
                 </div>
@@ -93,9 +93,11 @@ if($status==false){
                         </table>
                     </div>
                     <!-- ボタン -->
-                    <div class="button_container">
-                        <input type="submit" name="edit" class="button" value="修正">
-                        <input type="submit" name="delete" class="button" value="削除">
+                    <div class="button_outer">
+                        <div class="button_container">
+                            <input type="submit" name="edit" class="button" value="修正">
+                            <input type="submit" name="delete" class="button" value="削除">
+                        </div>
                     </div>
                     <!-- ボタン -->
                 </form>
@@ -148,9 +150,9 @@ if($status==false){
                 {
                 label: '体温（℃）',
                 data: chart_temperature,
-                borderColor: "#ff9933",
+                borderColor: "#FF367F",
                 backgroundColor: "rgba(0,0,0,0)",
-                pointBackgroundColor: "#ff9933",
+                pointBackgroundColor: "#FF367F",
                 lineTension: 0, //各点を直線で結ぶ
                 }
             ],

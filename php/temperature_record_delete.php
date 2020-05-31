@@ -47,7 +47,7 @@ if($status==false){
                 <a href="../index.html" class="main_icon"
                 ><img src="../img/stork.png" alt="コウノトリ"
                 /></a>
-                <a href="index.html" class="main_title">
+                <a href="../index.html" class="main_title">
                 <p class="title">S-tallk ～これからの話について～</p>
                 </a>
                 <div class="menu-btn">
@@ -55,7 +55,7 @@ if($status==false){
                     <div class="menu">
                        <a href="../index.html" class="dec"><div class="menu__item">トップページ</div></a>
                        <a href="../input.html" class="dec"><div class="menu__item">検温結果の記録</div></a>
-                       <a href="temperature_record" class="dec"><div class="menu__item">基礎体温の推移</div></a>
+                       <a href="temperature_record.php" class="dec"><div class="menu__item">基礎体温の推移</div></a>
                        <a href="#" class="dec"><div class="menu__item">出産日予測</div></a>
                     </div>
                 </div>
@@ -70,42 +70,31 @@ if($status==false){
             <input type="hidden" name="id" value="<?php echo $delete_id;?>">
             <!-- idをhiddenで次の画面へパス -->
 
-            <!-- 日付の入力 -->
-            <p class="small_title"><span class="emphasis">●日付</span></p>
-            <div class="small_input">
-                <input
-                type="date"
-                id="date_input"
-                class="date_input"
-                name="date"
-                placeholder="Date"
-                value="<?php echo $delete_date;?>"
-                required
-                />
+            <!-- 一覧表 -->
+            <div class="outer_chart">
+                <div class="chart_temperature_edit">
+                        <div class="form">
+                            <table id="output_temperature">
+                                <tr>
+                                <th>日付</th>
+                                <th>体温（℃）</th>
+                                </tr>
+                                <tr>
+                                <td><?php echo $delete_date ?></td>
+                                <td><?php echo $delete_temperature ?></td>
+                                </tr>
+                            </table>
+                        </div>
+                </div>
             </div>
-            <!-- 日付の入力 -->
-
-            <!-- 体温の入力 -->
-            <p class="small_title">
-                <span class="emphasis">●体温</span
-                >（※半角数字で小数点第一位まで入力）
-            </p>
-            <div class="small_input">
-                <input
-                type="temperature"
-                id="temperature_input"
-                class="temperature_input"
-                name="temperature"
-                value="<?php echo $delete_temperature;?>"
-                required
-                />
-                <div>℃</div>
+            <!-- 一覧表 -->
+            <div class="info">
+            <p>※以上のデータを削除しても構わない場合は、「削除」を押してください。</p>
             </div>
-            <!-- 体温の入力 -->
 
             <!-- 記録ボタン -->
             <div class="submit_container">
-                <input type="submit" class="record_button" value="削除" />
+                <input type="submit" class="button" value="削除" />
             </div>
             <!-- 記録ボタン -->
         </form>

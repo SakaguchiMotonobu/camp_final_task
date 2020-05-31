@@ -33,7 +33,7 @@ $status = $stmt->execute();
                 <a href="../index.html" class="main_icon"
                 ><img src="../img/stork.png" alt="コウノトリ"
                 /></a>
-                <a href="index.html" class="main_title">
+                <a href="../index.html" class="main_title">
                 <p class="title">S-tallk ～これからの話について～</p>
                 </a>
                 <div class="menu-btn">
@@ -41,7 +41,7 @@ $status = $stmt->execute();
                     <div class="menu">
                        <a href="../index.html" class="dec"><div class="menu__item">トップページ</div></a>
                        <a href="../input.html" class="dec"><div class="menu__item">検温結果の記録</div></a>
-                       <a href="temperature_record" class="dec"><div class="menu__item">基礎体温の推移</div></a>
+                       <a href="temperature_record.php" class="dec"><div class="menu__item">基礎体温の推移</div></a>
                        <a href="#" class="dec"><div class="menu__item">出産日予測</div></a>
                     </div>
                 </div>
@@ -49,8 +49,9 @@ $status = $stmt->execute();
         </header>
         <!-- ヘッダー -->
 
-        <p>削除しました。</p>
-        <?php echo $done_id ?>
+        <div class="info2">
+        <p>指定されたデータを削除しました。</p>
+        </div>
 
         <!-- フッター -->
         <footer class="footer text-center">

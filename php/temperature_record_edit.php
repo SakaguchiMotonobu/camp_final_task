@@ -47,7 +47,7 @@ if($status==false){
                 <a href="../index.html" class="main_icon"
                 ><img src="../img/stork.png" alt="コウノトリ"
                 /></a>
-                <a href="index.html" class="main_title">
+                <a href="../index.html" class="main_title">
                 <p class="title">S-tallk ～これからの話について～</p>
                 </a>
                 <div class="menu-btn">
@@ -55,7 +55,7 @@ if($status==false){
                     <div class="menu">
                        <a href="../index.html" class="dec"><div class="menu__item">トップページ</div></a>
                        <a href="../input.html" class="dec"><div class="menu__item">検温結果の記録</div></a>
-                       <a href="temperature_record" class="dec"><div class="menu__item">基礎体温の推移</div></a>
+                       <a href="temperature_record.php" class="dec"><div class="menu__item">基礎体温の推移</div></a>
                        <a href="#" class="dec"><div class="menu__item">出産日予測</div></a>
                     </div>
                 </div>
@@ -63,53 +63,72 @@ if($status==false){
         </header>
         <!-- ヘッダー -->
 
-        <!-- 入力箇所 -->
-        <form method="post" action="temperature_record_edit_done.php" class="daily_record">
+      <!-- 機能部分 -->
+      <div class="function_field">
+        <div class="main_field">
+          <div class="input_field">
+            <div class="input_inner_field">
+              <!-- タイトル -->
+              <div class="input_title_edit">
+                <img src="../img/edit.png" alt="体温計" />
+                <p class="input_text_title">検温記録の修正</p>
+              </div>
+              <div class="attention">
+                <p>※正しい日付、体温を入力し「確定」を押してください。</p>
+              </div>
+              <!-- タイトル -->
 
-            <!-- idをhiddenで次の画面へパス -->
-            <input type="hidden" name="id" value="<?php echo $edit_id;?>">
-            <!-- idをhiddenで次の画面へパス -->
+                <form method="post" action="temperature_record_edit_done.php" class="daily_record">
 
-            <!-- 日付の入力 -->
-            <p class="small_title"><span class="emphasis">●日付</span></p>
-            <div class="small_input">
-                <input
-                type="date"
-                id="date_input"
-                class="date_input"
-                name="date"
-                placeholder="Date"
-                value="<?php echo $edit_date;?>"
-                required
-                />
+                    <!-- idをhiddenで次の画面へパス -->
+                    <input type="hidden" name="id" value="<?php echo $edit_id;?>">
+                    <!-- idをhiddenで次の画面へパス -->
+
+                    <!-- 日付の入力 -->
+                    <p class="small_title"><span class="emphasis">●日付</span></p>
+                    <div class="small_input">
+                        <input
+                        type="date"
+                        id="date_input"
+                        class="date_input"
+                        name="date"
+                        placeholder="Date"
+                        value="<?php echo $edit_date;?>"
+                        required
+                        />
+                    </div>
+                    <!-- 日付の入力 -->
+
+                    <!-- 体温の入力 -->
+                    <p class="small_title">
+                        <span class="emphasis">●体温</span
+                        >（※半角数字で小数点第一位まで入力）
+                    </p>
+                    <div class="small_input">
+                        <input
+                        type="temperature"
+                        id="temperature_input"
+                        class="temperature_input"
+                        name="temperature"
+                        value="<?php echo $edit_temperature;?>"
+                        required
+                        />
+                        <div>℃</div>
+                    </div>
+                    <!-- 体温の入力 -->
+
+                    <!-- 記録ボタン -->
+                    <div class="submit_container">
+                        <input type="submit" class="button" value="確定" />
+                    </div>
+                    <!-- 記録ボタン -->
+                </form>
             </div>
-            <!-- 日付の入力 -->
+          </div>
+        </div>
+      </div>
+      <!-- 機能部分 -->
 
-            <!-- 体温の入力 -->
-            <p class="small_title">
-                <span class="emphasis">●体温</span
-                >（※半角数字で小数点第一位まで入力）
-            </p>
-            <div class="small_input">
-                <input
-                type="temperature"
-                id="temperature_input"
-                class="temperature_input"
-                name="temperature"
-                value="<?php echo $edit_temperature;?>"
-                required
-                />
-                <div>℃</div>
-            </div>
-            <!-- 体温の入力 -->
-
-            <!-- 記録ボタン -->
-            <div class="submit_container">
-                <input type="submit" class="record_button" value="修正" />
-            </div>
-            <!-- 記録ボタン -->
-        </form>
-        <!-- 入力箇所 -->
 
         <!-- フッター -->
         <footer class="footer text-center">

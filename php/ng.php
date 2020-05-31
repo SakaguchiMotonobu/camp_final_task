@@ -4,32 +4,16 @@
 try {
 
 $done_id = $_POST["id"];
-$done_date = $_POST["date"];
-$done_temperature = $_POST["temperature"];
 
 $pdo = new PDO('mysql:dbname=stork_db;charset=utf8;host=localhost','root','');
 } catch (PDOException $e) {
   exit('データベースに接続できませんでした。'.$e->getMessage());
 }
 
-//２．データ更新SQL作成
-$stmt = $pdo->prepare("UPDATE temperature_table SET date='$done_date',temperature='$done_temperature'  WHERE id=$done_id"); 
+//２．データ削除SQL作成
+$stmt = $pdo->prepare("DELETE FROM temperature_table WHERE id=$done_id"); 
 $status = $stmt->execute();
 
-//３．データ表示
-$view="";
-if($status==false){
-  //execute（SQL実行時にエラーがある場合）
-  $error = $stmt->errorInfo();
-  exit("ErrorQuery:".$error[2]);
-}else{
-  //Selectデータの数だけ自動でループ $resultの中に「カラム名」が入ってくるのでそれを表示
-  while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
-      $edit_date = $result["date"];
-      $edit_temperature = $result["temperature"];
-  }
-
-}
 ?>
 
 <!-- html -->
@@ -65,28 +49,8 @@ if($status==false){
         </header>
         <!-- ヘッダー -->
 
-        <!-- 一覧表 -->
-        <div class="outer_chart">
-            <div class="chart_temperature_edit">
-                <form method="post" action="branch.php">
-                    <div class="form">
-                        <table id="output_temperature">
-                            <tr>
-                            <th>日付</th>
-                            <th>体温（℃）</th>
-                            </tr>
-                            <tr>
-                            <td><?php echo $done_date ?></td>
-                            <td><?php echo $done_temperature ?></td>
-                            </tr>
-                        </table>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!-- 一覧表 -->
-        <div class="info">
-        <p>以上のとおり修正しました。</p>
+        <div class="info2">
+        <p>「修正／削除」から、ひとつ選択してください。</p>
         </div>
 
         <!-- フッター -->

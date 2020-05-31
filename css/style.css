@@ -81,6 +81,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
   /* box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3); */
 }
 .shadow {
@@ -102,13 +103,19 @@ body {
 .function_field {
   width: 100%;
   display: flex;
-  margin-top: 50px;
-  background-color: red;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  justify-content: center;
 }
 /* メイン領域 */
+.outer_main {
+  display: flex;
+  justify-content: center;
+}
 .main_field {
   background-color: turquoise;
-  width: 60%;
+  color: rgb(75, 75, 75);
+  width: 800px;
 }
 .input_field {
   width: 100%;
@@ -129,8 +136,15 @@ body {
   display: flex;
   justify-content: center;
 }
+.input_title_edit {
+  margin: 0 auto;
+  padding: 30px 0 0;
+  display: flex;
+  justify-content: center;
+}
 .input_text_title {
   font-size: 25px;
+  margin-bottom: 0;
   margin-left: 7px;
   font-family: "sans-serif";
   font-weight: bold;
@@ -161,11 +175,16 @@ body {
 .emphasis {
   font-size: 25px;
 }
+.attention {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 /* ボタン */
 .submit_container {
   margin: 30px 0;
 }
-.record_button {
+.button {
   width: 130px;
   background-color: #ff9872;
   border-radius: 5px;
@@ -179,26 +198,27 @@ body {
   text-decoration: none;
   margin: 10px auto;
   padding: 10px 0;
+  cursor: pointer;
 }
-.record_button:hover {
+.button:hover {
   opacity: 0.8;
 }
-.record_button:active {
+.button:active {
   box-shadow: 0 1px 0 #ff8856;
   border-color: #cccccc;
   margin: 12px auto 8px;
 }
+.button_outer {
+  display: flex;
+  justify-content: center;
+}
+.button_container {
+  display: flex;
+  margin-top: 40px;
+  width: 350px;
+}
 /* ボタン */
 /* メイン領域 */
-
-/* サブ領域 */
-.sub_field {
-  background-color: yellow;
-  width: 40%;
-}
-/* サブ領域 */
-
-/* 機能部分 */
 
 /* フッター */
 .footer {
@@ -236,6 +256,10 @@ canvas#line_chart {
   width: 600px;
   margin: 60px auto;
 }
+.chart_temperature_edit {
+  width: 600px;
+  margin: 60px auto 15px;
+}
 .form {
   background-color: #fff9ee;
   box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3);
@@ -250,15 +274,15 @@ table th:first-child {
 }
 table th:last-child {
   border-radius: 0 5px 0 0;
-  border-right: 1px solid #ff9933;
+  border-right: 1px solid #ff367f;
 }
 table th {
   text-align: center;
   color: white;
-  background: linear-gradient(#ffcc33, #ff6633);
-  border-left: 1px solid #ff9933;
-  border-top: 1px solid #ff9933;
-  border-bottom: 1px solid #ff9933;
+  background: linear-gradient(#fde498, #ff0461);
+  border-left: 1px solid #ff367f;
+  border-top: 1px solid #ff367f;
+  border-bottom: 1px solid #ff367f;
   box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.3) inset;
   width: 25%;
   padding: 10px 0;
@@ -271,6 +295,7 @@ table td {
   box-shadow: 0px -3px 5px 1px #eee inset;
   width: 25%;
   padding: 10px 0;
+  color: rgb(75, 75, 75);
 }
 table td:last-child {
   border-right: 1px solid #a8b7c5;
@@ -281,9 +306,24 @@ table tr:last-child td:first-child {
 table tr:last-child td:last-child {
   border-radius: 0 0 5px 0;
 }
-/* グラフ */
 input[type="radio"] {
   width: 20px;
   height: 20px;
   vertical-align: middle;
 }
+.info {
+  display: flex;
+  justify-content: center;
+}
+.info p {
+  width: 600px;
+  color: rgb(75, 75, 75);
+}
+.info2 {
+  margin-left: 20px;
+}
+.info2 p {
+  margin-left: 20px;
+  color: rgb(75, 75, 75);
+}
+/* グラフ */
