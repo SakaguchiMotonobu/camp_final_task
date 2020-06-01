@@ -43,7 +43,7 @@ if($status==false){
   <meta charset="utf-8">
   <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css" />
-　<title>基礎体温の推移</title>
+  <title>基礎体温の推移</title>
 </head>
 <body>
     <div class="wrap">
@@ -54,7 +54,7 @@ if($status==false){
                 ><img src="../img/stork.png" alt="コウノトリ"
                 /></a>
                 <a href="../index.html" class="main_title">
-                <p class="title">S-tallk ～これからの話について～</p>
+                <p class="title">S-talk ～これからの話について～</p>
                 </a>
                 <div class="menu-btn">
                     <img src="../img/hamburger.png" alt="ハンバーガーメニュー" />

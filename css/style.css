@@ -116,6 +116,7 @@ body {
   background-color: turquoise;
   color: rgb(75, 75, 75);
   width: 800px;
+  text-align: center;
 }
 .input_field {
   width: 100%;
@@ -180,6 +181,34 @@ body {
   justify-content: center;
   margin-bottom: 20px;
 }
+
+/* メインテキスト部分 */
+/* 試作中 */
+.row {
+  display: flex;
+  align-items: center;
+  /* background-color: #fafafa; */
+}
+.row_end {
+  display: flex;
+  justify-content: center;
+}
+.main_img {
+  width: 400px;
+}
+.sen {
+  width: 400px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.subtitle {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+/* 試作中 */
+/* メインテキスト部分 */
+
 /* ボタン */
 .submit_container {
   margin: 30px 0;

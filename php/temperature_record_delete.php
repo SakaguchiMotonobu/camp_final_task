@@ -11,7 +11,7 @@ $pdo = new PDO('mysql:dbname=stork_db;charset=utf8;host=localhost','root','');
 }
 
 //２．データ取得SQL作成
-$stmt = $pdo->prepare("SELECT * FROM temperature_table WHERE id=$delete_id"); 
+$stmt = $pdo->prepare("SELECT * FROM temperature_table WHERE id=$delete_id");
 $status = $stmt->execute();
 
 //３．データ表示
@@ -37,7 +37,7 @@ if($status==false){
   <meta charset="utf-8">
   <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css" />
-　<title>基礎体温の推移</title>
+  <title>データ削除</title>
 </head>
 <body>
     <div class="wrap">
@@ -48,7 +48,7 @@ if($status==false){
                 ><img src="../img/stork.png" alt="コウノトリ"
                 /></a>
                 <a href="../index.html" class="main_title">
-                <p class="title">S-tallk ～これからの話について～</p>
+                <p class="title">S-talk ～これからの話について～</p>
                 </a>
                 <div class="menu-btn">
                     <img src="../img/hamburger.png" alt="ハンバーガーメニュー" />

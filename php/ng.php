@@ -11,7 +11,7 @@ $pdo = new PDO('mysql:dbname=stork_db;charset=utf8;host=localhost','root','');
 }
 
 //２．データ削除SQL作成
-$stmt = $pdo->prepare("DELETE FROM temperature_table WHERE id=$done_id"); 
+$stmt = $pdo->prepare("DELETE FROM temperature_table WHERE id=$done_id");
 $status = $stmt->execute();
 
 ?>
@@ -23,7 +23,7 @@ $status = $stmt->execute();
   <meta charset="utf-8">
   <!-- CSS -->
   <link rel="stylesheet" href="../css/style.css" />
-　<title>基礎体温の推移</title>
+  <title>S-talk</title>
 </head>
 <body>
     <div class="wrap">
@@ -34,7 +34,7 @@ $status = $stmt->execute();
                 ><img src="../img/stork.png" alt="コウノトリ"
                 /></a>
                 <a href="../index.html" class="main_title">
-                <p class="title">S-tallk ～これからの話について～</p>
+                <p class="title">S-talk ～これからの話について～</p>
                 </a>
                 <div class="menu-btn">
                     <img src="../img/hamburger.png" alt="ハンバーガーメニュー" />
