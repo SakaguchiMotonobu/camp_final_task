@@ -113,6 +113,10 @@ body {
   justify-content: center;
 }
 .main_field {
+  color: rgb(75, 75, 75);
+  width: 800px;
+}
+.main_field_top {
   background-color: turquoise;
   color: rgb(75, 75, 75);
   width: 800px;
