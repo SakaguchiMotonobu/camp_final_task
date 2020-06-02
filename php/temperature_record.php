@@ -130,11 +130,11 @@ if($status==false){
             // console.log(chart_date);
             // console.log(chart_temperature);
 
-            // グラフに表示する数を15件に限定
-            while (chart_date.length>15) {
+            // グラフに表示する数を20件に限定
+            while (chart_date.length>20) {
                 chart_date.shift();
             }
-            while (chart_temperature.length>15) {
+            while (chart_temperature.length>20) {
                 chart_temperature.shift();
             }
 

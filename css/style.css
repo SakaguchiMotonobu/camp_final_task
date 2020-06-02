@@ -1,5 +1,6 @@
 body {
-  background-color: #f3f2e9;
+  /* background-color: #f3f2e9; */
+  background-color: #d8d7c7da;
 }
 /* ボディー全体 */
 .wrap {
@@ -12,7 +13,7 @@ body {
 
 /* ヘッダー */
 .header {
-  margin: 0 auto 40px auto;
+  margin: 0 auto 80px auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,7 +82,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 100px;
   /* box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3); */
 }
 .shadow {
@@ -114,13 +115,15 @@ body {
 }
 .main_field {
   color: rgb(75, 75, 75);
-  width: 800px;
+  width: 600px;
 }
 .main_field_top {
-  background-color: turquoise;
   color: rgb(75, 75, 75);
-  width: 800px;
+  width: 1200px;
   text-align: center;
+  background-color: #fddff9;
+  margin-bottom: 50px;
+  box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3);
 }
 .input_field {
   width: 100%;
@@ -197,11 +200,17 @@ body {
   display: flex;
   justify-content: center;
 }
+.main_img_outer {
+  width: 600px;
+  height: 400px;
+}
 .main_img {
-  width: 400px;
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
 }
 .sen {
-  width: 400px;
+  width: 600px;
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -209,6 +218,9 @@ body {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 40px;
+}
+.text {
+  line-height: 40px;
 }
 /* 試作中 */
 /* メインテキスト部分 */
@@ -258,9 +270,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 100px;
   margin-top: 50px;
-  padding: 20px 40px 20px;
+  /* padding: 20px 40px 20px; */
   background: #707070;
   color: #fff;
   box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3);
