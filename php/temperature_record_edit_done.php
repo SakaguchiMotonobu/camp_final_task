@@ -44,7 +44,7 @@ $status = $stmt->execute();
                        <a href="../index.html" class="dec"><div class="menu__item">トップページ</div></a>
                        <a href="../input.html" class="dec"><div class="menu__item">検温結果の記録</div></a>
                        <a href="temperature_record.php" class="dec"><div class="menu__item">基礎体温の推移</div></a>
-                       <a href="#" class="dec"><div class="menu__item">出産日予測</div></a>
+                       <a href="../calculation.html" class="dec"><div class="menu__item">出産日予測</div></a>
                     </div>
                 </div>
             </div>

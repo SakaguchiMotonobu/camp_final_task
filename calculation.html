@@ -40,56 +40,42 @@
       <!-- ヘッダー -->
 
       <!-- 機能部分 -->
-      <div class="function_field">
-        <div class="main_field">
-          <div class="input_field">
-            <div class="input_inner_field">
-              <!-- タイトル -->
-              <div class="input_title">
-                <img src="img/thermometer.png" alt="体温計" />
-                <p class="input_text_title">検温結果の記録</p>
-              </div>
-              <!-- タイトル -->
-
-              <form method="post" action="php/insert.php" class="daily_record">
-                <!-- 日付の入力 -->
-                <p class="small_title"><span class="emphasis">●日付</span></p>
-                <div class="small_input">
-                  <input
-                    type="date"
-                    id="date_input"
-                    class="date_input"
-                    name="date"
-                    placeholder="Date"
-                    required
-                  />
-                </div>
-                <!-- 日付の入力 -->
-
-                <!-- 体温の入力 -->
-                <p class="small_title">
-                  <span class="emphasis">●体温</span
-                  >（※半角数字で小数点第一位まで入力）
-                </p>
-                <div class="small_input">
-                  <input
-                    type="temperature"
-                    id="temperature_input"
-                    class="temperature_input"
-                    name="temperature"
-                    required
-                  />
-                  <div>℃</div>
-                </div>
-                <!-- 体温の入力 -->
-
-                <!-- 記録ボタン -->
-                <div class="submit_container">
-                  <input type="submit" class="button" value="記録" />
-                </div>
-                <!-- 記録ボタン -->
-              </form>
+      <div class="outer_outer_calculation">
+        <div class="outer_calculation">
+          <!-- 試作 -->
+          <div class="input_title_edit">
+            <img src="img/calendar.png" alt="カレンダー" />
+            <p class="input_text_title">出産日予測</p>
+          </div>
+          <!-- 試作 -->
+          <div class="calculation_field">
+            <div class="colom">
+              <p>
+                最終月経初日を入力して<br />「計算」を押してください。<br />
+                <input
+                  type="date"
+                  id="input_date"
+                  class="input_date"
+                  placeholder="Date"
+                  required
+                />
+              </p>
             </div>
+            <div class="colom2">
+              <p id="arrow"></p>
+            </div>
+            <div class="colom">
+              <p id="result"></p>
+            </div>
+          </div>
+
+          <div id="submit_container">
+            <input
+              id="calculation_field_button"
+              type="submit"
+              class="button"
+              value="計算"
+            />
           </div>
         </div>
       </div>

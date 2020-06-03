@@ -190,7 +190,6 @@ body {
 }
 
 /* メインテキスト部分 */
-/* 試作中 */
 .row {
   display: flex;
   align-items: center;
@@ -222,7 +221,6 @@ body {
 .text {
   line-height: 40px;
 }
-/* 試作中 */
 /* メインテキスト部分 */
 
 /* ボタン */
@@ -278,6 +276,47 @@ body {
   box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3);
 }
 /* フッター */
+
+/* 出産日予測 */
+.outer_outer_calculation {
+  display: flex;
+  justify-content: center;
+}
+.outer_calculation {
+  color: #565656;
+  background: #ffd5ec;
+  box-shadow: 0px 0px 0px 10px #ffd5ec;
+  border: dashed 2px #ff82b2;
+  border-radius: 8px;
+  width: 600px;
+}
+.calculation_field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.colom {
+  width: 230px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.colom2 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.emphasis2 {
+  font-weight: bolder;
+  color: #ff1a6f;
+}
+/* 出産日予測 */
 
 /* グラフ */
 .chart {
