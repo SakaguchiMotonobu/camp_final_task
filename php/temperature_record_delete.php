@@ -89,12 +89,12 @@ if($status==false){
             </div>
             <!-- 一覧表 -->
             <div class="info">
-            <p>※以上のデータを削除しても構わない場合は、「削除」を押してください。</p>
+            <p>※以上のデータを削除しても構わない場合は、「確定」を押してください。</p>
             </div>
 
             <!-- 記録ボタン -->
             <div class="submit_container">
-                <input type="submit" class="button" value="削除" />
+                <input type="submit" class="button" value="確定" />
             </div>
             <!-- 記録ボタン -->
         </form>
