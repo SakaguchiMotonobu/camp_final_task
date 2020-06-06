@@ -8,7 +8,7 @@ $pdo = new PDO('mysql:dbname=stork_db;charset=utf8;host=localhost','root','');
 }
 
 //２．データ取得SQL作成
-$stmt = $pdo->prepare("select * from (select * from temperature_table order by date desc limit 30) as A order by date"); //最新30件を日付の昇順で取得
+$stmt = $pdo->prepare("select * from (select * from temperature_table order by date desc limit 30) as latest30 order by date asc"); //最新30件を日付の昇順で取得
 $status = $stmt->execute();
 
 //３．データ表示
@@ -138,7 +138,7 @@ if($status==false){
                 chart_temperature.shift();
             }
 
-            // 日付の標記の整形
+            // 日付の表記の整形
             let chart_date_shap = chart_date.map(item => item.slice(5).replace( '-', '月' )+"日")
 
         var ctx = document.getElementById("line_chart");
